@@ -115,28 +115,28 @@
 # """, unsafe_allow_html=True)
 
 
-import subprocess
-import sys
+# import subprocess
+# import sys
 
-try:
-    import plotly.graph_objects as go
-except ModuleNotFoundError:
-    print("Plotly not found. Installing...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
-    import plotly.graph_objects as go  # Retry import after installation
+# try:
+#     import plotly.graph_objects as go
+# except ModuleNotFoundError:
+#     print("Plotly not found. Installing...")
+#     subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
+#     import plotly.graph_objects as go  # Retry import after installation
 
 
-def install_package(package):
-    try:
-        __import__(package)
-    except ImportError:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-        __import__(package)
+# def install_package(package):
+#     try:
+#         __import__(package)
+#     except ImportError:
+#         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+#         __import__(package)
 
-install_package("plotly")
+# install_package("plotly")
 
-# Now you can safely import plotly
-import plotly.graph_objects as go
+# # Now you can safely import plotly
+# import plotly.graph_objects as go
 
 
 import streamlit as st
