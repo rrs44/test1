@@ -89,7 +89,7 @@ with col1:
             <strong>Main Entrance - Live Feed</strong>
             <span class="recording-indicator">● Recording</span>
         </div>
-        <video width="100%" autoplay loop muted controls style="border-radius: 8px;">
+        <video width="100%" autoplay loop muted style="border-radius: 8px;">
             <source src="data:video/mp4;base64,{video_encoded}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
